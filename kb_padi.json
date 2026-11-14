@@ -1,0 +1,71 @@
+{
+  "judul": "Sistem Pakar Diagnosis Hama dan Penyakit Utama Tanaman Padi Berdasarkan Gejala Fisik Menggunakan Metode Forward Chaining",
+  "batas": "Aturan disusun berdasarkan pedoman operasional budidaya padi Kementerian Pertanian RI dan publikasi ilmiah Jurnal Perlindungan Tanaman Indonesia UGM. Sistem ini memberikan diagnosis dini dan rekomendasi pengendalian teknis hama serta penyakit tanaman padi; hasil sistem berupa rekomendasi pendukung keputusan budidaya, bukan jaminan mutlak.",
+  "sumber": {
+    "S1": "Prosedur Operasional Standar (POS) Budi Daya Padi Sawah: Pengendalian Hama dan Penyakit Tanaman Padi, Badan Litbang Pertanian Kementerian Pertanian RI, https://ppid.pertanian.go.id/",
+    "S2": "Potensi Parasitoid Telur dalam Mengendalikan Wereng Batang Cokelat (Nilaparvata lugens Stal.) Pasca Ledakan, Jurnal Perlindungan Tanaman Indonesia UGM, https://doi.org/10.22146/jpti.28886",
+    "S3": "Penyakit Hawar Pelepah (Rhizoctonia solani) pada Padi dan Taktik Pengelolaannya, Jurnal Perlindungan Tanaman Indonesia UGM & Balai Besar Penelitian Tanaman Padi, https://doi.org/10.22146/jpti.22494"
+  },
+  "aturan": [
+    {
+      "id": "R1",
+      "jika": [
+        "batang tanaman berlubang atau pangkal patah",
+        "titik tumbuh pucuk daun mati menggulung mengering"
+      ],
+      "mode": "dan",
+      "maka": "indikasi serangan hama penggerek batang",
+      "sumber": "S1"
+    },
+    {
+      "id": "R2",
+      "jika": [
+        "rumpun padi menguning kecokelatan mengering melingkar seperti terbakar",
+        "terdapat koloni serangga kecil cokelat di pangkal batang"
+      ],
+      "mode": "dan",
+      "maka": "indikasi serangan wereng batang cokelat",
+      "sumber": "S1, S2"
+    },
+    {
+      "id": "R3",
+      "jika": [
+        "indikasi serangan hama penggerek batang",
+        "tanaman padi masih berada pada fase vegetatif anakan"
+      ],
+      "mode": "dan",
+      "maka": "Hama Penggerek Batang Padi (Gejala Sundep) Fase Vegetatif: Rekomendasi kumpulkan kelompok telur di pesemaian dan aplikasikan musuh alami parasitoid Trichogramma sp.",
+      "sumber": "S1"
+    },
+    {
+      "id": "R4",
+      "jika": [
+        "indikasi serangan wereng batang cokelat",
+        "terdapat cairan manis embun jelaga hitam dan populasi serangga padat"
+      ],
+      "mode": "dan",
+      "maka": "Serangan Berat Wereng Batang Cokelat (Gejala Hopperburn): Rekomendasi pengeringan berkala sawah dan aplikasi biopestisida jamur Beauveria bassiana",
+      "sumber": "S1, S2"
+    },
+    {
+      "id": "R5",
+      "jika": [
+        "terdapat bercak lonjong keabu-abuan dengan tepi cokelat pada pelepah dekat permukaan air",
+        "bercak merambat meluas ke pelepah daun bagian atas"
+      ],
+      "mode": "dan",
+      "maka": "Penyakit Hawar Pelepah Daun (Rhizoctonia solani): Rekomendasi atur jarak tanam jajar legowo dan kurangi dosis pupuk Nitrogen berlebih",
+      "sumber": "S1, S3"
+    },
+    {
+      "id": "R6",
+      "jika": [
+        "terdapat bercak daun berbentuk belah ketupat dengan ujung meruncing",
+        "bagian tengah bercak berwarna kelabu keputihan"
+      ],
+      "mode": "dan",
+      "maka": "Penyakit Blas Daun (Pyricularia oryzae): Rekomendasi perlakuan benih fungisida dan sanitasi sisa jerami tanaman yang terinfeksi",
+      "sumber": "S1"
+    }
+  ]
+}
