@@ -5,10 +5,10 @@ Program Studi Teknik Informatika, Fakultas Teknik, Universitas Mataram
 
 ---
 
-* **Nama** : [Nama Mahasiswa]
+* **Nama** : I WAYAN GIRINDRA PRASASTA
 * **NIM** : F1D02410009
 * **Mata Kuliah** : Kecerdasan Buatan (Materi 5 - Sistem Pakar)
-* **Dosen Pengampu** : Pahrul Irfan, S.Kom., M.Kom. & Halil Akhyar, S.Kom., M.Kom.
+* **Dosen Pengampu** : Pahrul Irfan, S.Kom., M.Kom
 
 ---
 
